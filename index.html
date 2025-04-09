@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-white mb-4">贪吃蛇游戏</h1>
+        <div class="flex gap-4 justify-center">
+            <button id="startBtn" class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                开始游戏
+            </button>
+            <button id="restartBtn" class="px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+                重新开始
+            </button>
+        </div>
+        <div class="mt-4 text-white text-xl">
+            得分: <span id="score">0</span>
+        </div>
+    </div>
+    
+    <div class="relative">
+        <canvas id="gameCanvas" class="border-4 border-gray-700 rounded-lg bg-gray-800"></canvas>
+        <div id="gameOver" class="absolute inset-0 flex items-center justify-center hidden">
+            <div class="bg-black bg-opacity-75 p-8 rounded-lg text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">游戏结束</h2>
+                <p class="text-xl text-white mb-4">最终得分: <span id="finalScore">0</span></p>
+                <button id="playAgainBtn" class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+                    再玩一次
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
